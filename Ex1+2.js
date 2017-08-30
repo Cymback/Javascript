@@ -36,3 +36,14 @@ console.log("The names that contain L :" + dname);
 console.log("Assembling boys and girls: " + all);
 console.log("What is this: " + gurls);
 
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
