@@ -139,7 +139,7 @@ function Person(name) {
     console.log("Name: " + this.name);
     setTimeout(function () {
         console.log("Hi  " + self.name);  //
-    }.bind(this), 2000);
+    }.bind(this)); // 2000 (Timeout set here - commented out for console purposes)
 
 
 }
@@ -161,11 +161,41 @@ var comp2 = {message: "Hi"};
 
 var g1 = greeter.bind(comp1); //We can store a reference, with a specific “this” to use
 var g2 = greeter.bind(comp2); //And here another “this”
-setTimeout(g1, 500);
-setTimeout(g2, 1000);
+// setTimeout(g1, 500);
+// setTimeout(g2, 1000);
 
 
 console.log("===========================================");
+
+
+var personal = {firstName: "Casper", hobby: "Soccer", age: 24, email: "cph-cl177@cphbusiness.dk"};
+
+delete personal.age; // ( Deleting age ) //
+personal.firstName = "Jonny"; // It overwrites the initial firstname
+
+for (hobby in personal) {
+    console.log(hobby, personal[hobby])
+}
+
+console.log("===========================================");
+
+
+function me(firstName, lastName, age) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+
+}
+
+var MySelf = new Person("Casper", "Gross", 24);
+
+
+
+
+
+
+
+
 
 
 // console.log(add(1,2));
